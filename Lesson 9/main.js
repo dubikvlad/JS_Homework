@@ -1,4 +1,4 @@
-function Cat(name) {
+function Animal() {
     var foodAmount = 50;
 
     function formatFoodAmount() {
@@ -20,6 +20,13 @@ function Cat(name) {
     this.feed = function() {
         console.log('Насыпаем в миску ' + this.dailyNorm() + ' корма.');
     };
+}
+
+
+
+function Cat(name) {
+    Animal.call(this)
+
 }
 
 var barsik = new Cat('Барсик');
