@@ -5,6 +5,7 @@ function Animal() {
 
     function formatFoodAmount() {
         return foodAmount + ' гр.';
+
     }
 
 
@@ -17,12 +18,14 @@ function Animal() {
         }
 
         foodAmount = amount;
+        return this;
     };
 
     this.name = name;
 
     this.animalFeed = function() {
         console.log('Насыпаем в миску ' + self.dailyNorm() + ' корма.');
+        return this;
     };
 }
 
